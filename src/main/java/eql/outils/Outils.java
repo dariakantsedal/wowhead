@@ -48,8 +48,9 @@ public class Outils {
 			
 
 		default:
-			System.out.println("browser mal renseigné");
-			return null;
+			System.out.println("Browser était mal renseigné, Chrome se lance par default");
+			System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
+			return new ChromeDriver();
 		}
 	}
 
