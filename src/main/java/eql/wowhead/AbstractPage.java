@@ -33,7 +33,7 @@ public abstract class AbstractPage {
 			System.out.println("je vais cliquer sur cookies");
 		actions.moveToElement(button_continuer).click().perform();
 
-		// button_continuer.click();
+		
 	}
 
 }
