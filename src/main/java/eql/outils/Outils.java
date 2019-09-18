@@ -34,16 +34,16 @@ public class Outils {
 	public static WebDriver choisirNavigateur(String browser) {
 		switch (browser) {
 		case "firefox":
-			System.setProperty("webdriver.gecko.driver", "C:Installation/drivers/geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "src/main/resources/drivers/geckodriver.exe");
 			return new FirefoxDriver();
 			
 		case "ie":
-			System.setProperty("webdriver.ie.driver", "src/main/resources/driver/IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", "src/main/resources/drivers/IEDriverServer.exe");
 			return new InternetExplorerDriver();
 			
 
 		case "chrome":
-			System.setProperty("webdriver.chrome.driver", "C:/Installation/drivers/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
 			return new ChromeDriver();
 			
 

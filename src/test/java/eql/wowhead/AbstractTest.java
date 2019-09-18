@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import eql.outils.Outils;
+
 public class AbstractTest {
 	WebDriver driver;
 	WebDriverWait wait;
@@ -15,8 +17,8 @@ public class AbstractTest {
 	@Before
 	public void setUp() {
 		System.out.println("\n@Before");
-		System.setProperty("webdriver.chrome.driver", "C:/Installation/drivers/chromedriver.exe");
-		driver = new ChromeDriver();
+		
+		driver = Outils.choisirNavigateur("firefox");
 		wait = new WebDriverWait(driver, 10);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
