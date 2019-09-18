@@ -13,12 +13,13 @@ import eql.outils.Outils;
 public class AbstractTest {
 	WebDriver driver;
 	WebDriverWait wait;
+	
 
 	@Before
 	public void setUp() {
 		System.out.println("\n@Before");
-		
-		driver = Outils.choisirNavigateur("chrome");
+		final String BROWSER = System.getProperty("browser");
+		driver = Outils.choisirNavigateur(BROWSER);
 		wait = new WebDriverWait(driver, 10);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
