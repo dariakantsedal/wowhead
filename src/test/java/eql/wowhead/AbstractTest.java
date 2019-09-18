@@ -21,7 +21,9 @@ public class AbstractTest {
 		final String BROWSER = System.getProperty("browser");
 		driver = Outils.choisirNavigateur(BROWSER);
 		wait = new WebDriverWait(driver, 10);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
 		driver.manage().window().maximize();
 		driver.get("https://fr.wowhead.com/");
 	}
