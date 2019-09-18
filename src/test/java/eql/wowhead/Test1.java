@@ -29,16 +29,16 @@ public class Test1 extends AbstractTest {
 
 		String objet_de_recherche = "lardeur";
 		PagePreResultats resultats = page_accueil.rechercherDansLaBarre(objet_de_recherche, driver);
-		System.out.println("recherche est effectué");
+		System.out.println("looked for "+objet_de_recherche);
 		resultats.cliquer_sur_PNG();
-		System.out.println("cliqué sur PNG");
+		System.out.println("clicked on PNG");
 
 		PageLardeur lardeur = resultats.cliquer_sur_tete(driver);
-		System.out.println("cliqué sur la tete de mort");
+		System.out.println("clicked on tete de mort");
 
 		String bete1 = "Chahuteurs de cadavre";
 		PageObjetRecupere page_de_bete = lardeur.choisir_un_objet(driver, bete1);
-		System.out.println("cliqué sur " + bete1);
+		System.out.println("clicked on " + bete1);
 
 		List<String> comparaison = Outils.loadFile("src/main/resources/files/chauteur");
 
@@ -55,7 +55,7 @@ public class Test1 extends AbstractTest {
 		System.out.println("Navigate back");
 
 		page_de_bete = lardeur.choisir_un_objet(driver, bete2);
-		System.out.println("cliqué sur " + bete2);
+		System.out.println("clicked on " + bete2);
 
 		comparaison = Outils.loadFile("src/main/resources/files/chausseDeLardeur");
 		for (int i = 0; i < page_de_bete.get_info().size(); i++) {
@@ -66,7 +66,7 @@ public class Test1 extends AbstractTest {
 		System.out.println("Navigate back");
 
 		page_de_bete = lardeur.choisir_un_objet(driver, bete4);
-		System.out.println("cliqué sur " + bete4);
+		System.out.println("clicked on " + bete4);
 
 		comparaison = Outils.loadFile("src/main/resources/files/greves");
 		for (int i = 0; i < page_de_bete.get_info().size(); i++) {
@@ -76,7 +76,7 @@ public class Test1 extends AbstractTest {
 		System.out.println("Navigate back");
 
 		page_de_bete = lardeur.choisir_un_objet(driver, bete5);
-		System.out.println("cliqué sur " + bete5);
+		System.out.println("clicked on " + bete5);
 
 		comparaison = Outils.loadFile("src/main/resources/files/espaulier");
 		for (int i = 0; i < page_de_bete.get_info().size(); i++) {
