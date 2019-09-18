@@ -18,7 +18,7 @@ public class AbstractTest {
 	public void setUp() {
 		System.out.println("\n@Before");
 		
-		driver = Outils.choisirNavigateur("firefox");
+		driver = Outils.choisirNavigateur("chrome");
 		wait = new WebDriverWait(driver, 10);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
